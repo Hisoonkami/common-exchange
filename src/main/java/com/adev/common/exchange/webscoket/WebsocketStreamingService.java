@@ -338,7 +338,6 @@ public abstract class WebsocketStreamingService<T> implements WebSocketClientHan
             }
         }).doOnDispose(() -> {
             if (channels.containsKey(channelId)) {
-
                 String message = getUnsubscribeMessage(channelId);
                 if(StringUtils.isNotEmpty(message)){
 
